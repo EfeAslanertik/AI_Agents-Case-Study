@@ -1,0 +1,49 @@
+{
+    "dataset_summary": {
+        "num_rows": 100000,
+        "num_columns": 20,
+        "columns": [
+            "OrderID",
+            "OrderDate",
+            "CustomerID",
+            "CustomerName",
+            "ProductID",
+            "ProductName",
+            "Category",
+            "Brand",
+            "Quantity",
+            "UnitPrice",
+            "Discount",
+            "Tax",
+            "ShippingCost",
+            "TotalAmount",
+            "PaymentMethod",
+            "OrderStatus",
+            "City",
+            "State",
+            "Country",
+            "SellerID"
+        ]
+    },
+    "missing_values": {},
+    "type_issues": {},
+    "anomalies": {
+        "Discount": {
+            "method": "IQR",
+            "count": 1989,
+            "percentage": 0.0199
+        },
+        "Tax": {
+            "method": "IQR",
+            "count": 5109,
+            "percentage": 0.0511
+        },
+        "TotalAmount": {
+            "method": "IQR",
+            "count": 1360,
+            "percentage": 0.0136
+        }
+    },
+    "severity": "MEDIUM",
+    "blocking_issues": []
+}

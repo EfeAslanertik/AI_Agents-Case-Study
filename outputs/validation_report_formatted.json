@@ -1,0 +1,71 @@
+{
+    "status": {
+        "severity": "MEDIUM",
+        "blocking": false,
+        "summary": "Dataset is usable with minor anomalies that should be reviewed."
+    },
+    "dataset_overview": {
+        "rows": 100000,
+        "columns": 20,
+        "column_names": [
+            "OrderID",
+            "OrderDate",
+            "CustomerID",
+            "CustomerName",
+            "ProductID",
+            "ProductName",
+            "Category",
+            "Brand",
+            "Quantity",
+            "UnitPrice",
+            "Discount",
+            "Tax",
+            "ShippingCost",
+            "TotalAmount",
+            "PaymentMethod",
+            "OrderStatus",
+            "City",
+            "State",
+            "Country",
+            "SellerID"
+        ]
+    },
+    "data_quality": {
+        "missing_values": {
+            "columns_with_missing": 0,
+            "details": {}
+        },
+        "type_issues": {
+            "count": 0,
+            "details": {}
+        }
+    },
+    "anomaly_analysis": {
+        "method": "IQR",
+        "summary": "Minor statistical outliers detected",
+        "details": {
+            "Discount": {
+                "method": "IQR",
+                "count": 1989,
+                "percentage": 0.0199
+            },
+            "Tax": {
+                "method": "IQR",
+                "count": 5109,
+                "percentage": 0.0511
+            },
+            "TotalAmount": {
+                "method": "IQR",
+                "count": 1360,
+                "percentage": 0.0136
+            }
+        }
+    },
+    "blocking_issues": [],
+    "recommendations": [
+        "Proceed with downstream modeling.",
+        "Review anomaly-prone numerical features for business validity.",
+        "No missing-value preprocessing required.",
+        "No schema or type corrections needed."
+    ]
+}
