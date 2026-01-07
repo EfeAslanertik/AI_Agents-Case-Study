@@ -33,12 +33,12 @@ audit_agent.log_action(
 audit_agent.log_action(
     agent_name="DataQualityValidator",
     action_type="validation",
-    inputs={"dataset": "heart.csv"},
+    inputs={"dataset": "heart_disease_uci.csv"},
     outputs={
         "severity": "HIGH",
         "blocking_issues": ["ca missing 66%", "thal missing 52%"]
     },
-    notes="Initial data validation for heart dataset"
+    notes="Initial data validation for heart disease dataset"
 )
 
 # Example 3: Another sample action
